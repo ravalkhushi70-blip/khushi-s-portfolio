@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  
+  --color-brand-pink-50: #FDE2E4;
+  --color-brand-pink-100: #FCD0D4;
+  --color-brand-pink-200: #FAADB4;
+  --color-brand-pink-300: #F88E98;
+  --color-brand-plum-50: #F7EFF5;
+  --color-brand-plum-100: #D8B2D9;
+  --color-brand-plum-300: #9C549E;
+  --color-brand-plum-600: #6E1F70;
+  --color-brand-plum-800: #4A154B;
+  --color-brand-plum-900: #310E32;
+  --color-brand-charcoal: #2D3436;
+  --color-brand-charcoal-light: #4E5456;
+  --color-brand-cream: #FDFCF0;
+  --color-brand-cream-dark: #F4F2D8;
+  --color-brand-gold: #C5A059;
+  --color-brand-gold-dark: #A4803F;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-brand-pink-50);
+    color: var(--color-brand-charcoal);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-pink-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-plum-300);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-plum-600);
+}
+
