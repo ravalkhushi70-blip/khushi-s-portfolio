@@ -10,18 +10,43 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email || !message) return;
 
     setIsSubmitting(true);
+    setSubmitError(null);
     
-    // Simulate API request
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/ravalkhushi70@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          Name: name,
+          Email: email,
+          Brand: brand || "Not specified",
+          Message: message,
+          _subject: `New Portfolio Contact Form Submission from ${name}`,
+          _replyto: email
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Could not send the form. Please try again.");
+      }
+
       setIsSubmitted(true);
-    }, 1200);
+    } catch (err) {
+      console.error(err);
+      setSubmitError("Failed to send your message. Please try again, or email me directly at ravalkhushi70@gmail.com!");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -190,6 +215,12 @@ export default function Contact() {
                       className="w-full font-sans text-xs px-4 py-3 bg-brand-pink-50 border border-brand-pink-200 focus:border-brand-gold focus:ring-0 rounded-xl outline-none text-brand-plum-950 transition-colors resize-none"
                     />
                   </div>
+
+                  {submitError && (
+                    <div className="p-4 bg-red-50 border border-red-200 text-red-800 text-xs rounded-xl font-sans leading-relaxed">
+                      {submitError}
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <button
