@@ -107,7 +107,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="font-sans text-[9px] uppercase tracking-widest font-bold text-brand-plum-300 block">Aesthetic Snippets</span>
-                    <span className="font-sans text-xs sm:text-sm font-semibold text-brand-plum-950 block">@khushiraval_</span>
+                    <span className="font-sans text-xs sm:text-sm font-semibold text-brand-plum-950 block">@khushiiravall__</span>
                   </div>
                 </a>
 

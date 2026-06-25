@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   bio: "Khushi Raval is a digital marketing student and creative professional with hands-on experience at The Bombay Digital, Buzz Media Fame, and Filter It Media. She has worked across campaign planning, content strategy, influencer discovery, performance analysis, and brand communication for lifestyle, beauty, fashion, jewellery, wellness, and consumer brands.",
   email: "ravalkhushi70@gmail.com",
   linkedin: "https://linkedin.com/in/khushi-raval",
-  instagram: "https://instagram.com/khushiraval_",
+  instagram: "https://instagram.com/khushiiravall__",
   profileImage: "/src/assets/images/regenerated_image_1782355425473.jpg"
 };
 
