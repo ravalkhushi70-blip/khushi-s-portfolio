@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Calendar, Heart, ShieldCheck, Star } from 'lucide-react';
 import { PERSONAL_INFO } from '../data';
+import profileImage from '../assets/images/regenerated_image_1782355425473.jpg';
 
 export default function About() {
   const brandNiches = [
@@ -42,7 +43,7 @@ export default function About() {
               {/* Main Image container */}
               <div className="relative overflow-hidden rounded-2xl border border-brand-pink-200 bg-brand-pink-100 shadow-xl aspect-[4/5] group">
                 <img
-                  src={PERSONAL_INFO.profileImage}
+                  src={profileImage}
                   alt="Khushi Raval"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
